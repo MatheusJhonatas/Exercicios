@@ -1,0 +1,239 @@
+Escreva um programa que deverá ter as seguintes opções:
+1 - Carregar Vetor
+2 - Listar Vetor
+3 - Exibir apenas os números pares do vetor
+4 - Exibir apenas os números ímpares do vetor
+5 - Exibir a quantidade de números pares existem nas posições ímpares do vetor
+6 - Exibir a quantidade de números ímpares existem nas posições pares do vetor
+7 - Sair
+Deverá ser implementado um método para realizar cada uma das opções de 1 a 6.
+
+Código chat GPT:
+using System;
+
+class Program
+{
+    static int[] vetor;
+
+    static void Main(string[] args)
+    {
+        int opcao;
+
+        do
+        {
+            Console.WriteLine("Escolha uma opção:");
+            Console.WriteLine("1 - Carregar Vetor");
+            Console.WriteLine("2 - Listar Vetor");
+            Console.WriteLine("3 - Exibir apenas os números pares do vetor");
+            Console.WriteLine("4 - Exibir apenas os números ímpares do vetor");
+            Console.WriteLine("5 - Exibir a quantidade de números pares existentes nas posições ímpares do vetor");
+            Console.WriteLine("6 - Exibir a quantidade de números ímpares existentes nas posições pares do vetor");
+            Console.WriteLine("7 - Sair");
+            Console.Write("Opção: ");
+            opcao = int.Parse(Console.ReadLine());
+
+            switch (opcao)
+            {
+                case 1:
+                    CarregarVetor();
+                    break;
+                case 2:
+                    ListarVetor();
+                    break;
+                case 3:
+                    ExibirNumerosPares();
+                    break;
+                case 4:
+                    ExibirNumerosImpares();
+                    break;
+                case 5:
+                    QuantidadeParesPosicoesImpares();
+                    break;
+                case 6:
+                    QuantidadeImparesPosicoesPares();
+                    break;
+                case 7:
+                    Console.WriteLine("Programa encerrado.");
+                    break;
+                default:
+                    Console.WriteLine("Opção inválida.");
+                    break;
+            }
+
+        } while (opcao != 7);
+    }
+
+    static void CarregarVetor()
+    {
+        Console.Write("Digite o tamanho do vetor: ");
+        int tamanho = int.Parse(Console.ReadLine());
+        vetor = new int[tamanho];
+
+        for (int i = 0; i < tamanho; i++)
+        {
+            Console.Write($"Digite o valor para a posição {i}: ");
+            vetor[i] = int.Parse(Console.ReadLine());
+        }
+    }
+
+    static void ListarVetor()
+    {
+        if (vetor == null)
+        {
+            Console.WriteLine("Vetor não carregado.");
+            return;
+        }
+
+        Console.WriteLine("Vetor:");
+        foreach (int item in vetor)
+        {
+            Console.Write($"{item} ");
+        }
+        Console.WriteLine();
+    }
+
+    static void ExibirNumerosPares()
+    {
+        if (vetor == null)
+        {
+            Console.WriteLine("Vetor não carregado.");
+            return;
+        }
+
+        Console.WriteLine("Números pares do vetor:");
+        foreach (int item in vetor)
+        {
+            if (item % 2 == 0)
+            {
+                Console.Write($"{item} ");
+            }
+        }
+        Console.WriteLine();
+    }
+
+    static void ExibirNumerosImpares()
+    {
+        if (vetor == null)
+        {
+            Console.WriteLine("Vetor não carregado.");
+            return;
+        }
+
+        Console.WriteLine("Números ímpares do vetor:");
+        foreach (int item in vetor)
+        {
+            if (item % 2 != 0)
+            {
+                Console.Write($"{item} ");
+            }
+        }
+        Console.WriteLine();
+    }
+
+    static void QuantidadeParesPosicoesImpares()
+    {
+        if (vetor == null)
+        {
+            Console.WriteLine("Vetor não carregado.");
+            return;
+        }
+
+        int count = 0;
+        for (int i = 1; i < vetor.Length; i += 2)
+        {
+            if (vetor[i] % 2 == 0)
+            {
+                count++;
+            }
+        }
+        Console.WriteLine($"Quantidade de números pares nas posições ímpares: {count}");
+    }
+
+    static void QuantidadeImparesPosicoesPares()
+    {
+        if (vetor == null)
+        {
+            Console.WriteLine("Vetor não carregado.");
+            return;
+        }
+
+        int count = 0;
+        for (int i = 0; i < vetor.Length; i += 2)
+        {
+            if (vetor[i] % 2 != 0)
+            {
+                count++;
+            }
+        }
+        Console.WriteLine($"Quantidade de números ímpares nas posições pares: {count}");
+    }
+}
+
+
+MEU CÓDIGO POR ENQUANTO:
+
+using System;
+
+namespace ExerciciosOOP
+{
+    public class Program
+    {
+        private static IEnumerable<int> n;
+
+        public static void Main()
+        {
+            
+            Menu();
+        }
+        public static void Menu()
+        {
+
+            Console.WriteLine("1 - Carregar Vetor");
+            Console.WriteLine("2 - Listar Vetor");
+            Console.WriteLine("3 - Exibir apenas os números pares do vetor ");
+            Console.WriteLine("4 - Exibir apenas os números ímpares do vetor");
+            Console.WriteLine("5 - Exibir a quantidade de números pares existem nas posições ímpares do vetor");
+            Console.WriteLine("Exibir a quantidade de números ímpares existem nas posições pares do vetor");
+            Console.WriteLine("7 - Sair");
+            Console.Write("Opção selecionada: ");
+            int option = int.Parse(Console.ReadLine());
+            switch (option)
+            {
+                case 1: CarregarVetor(); break;
+                case 2: ListarVetor(); break;
+                case 3: ExibirPares(); break;
+                case 4: ExibirImpares(); break;
+                case 5: ExibirParesQuantidade(); break;
+                case 6: ExibirImparesQuantidade(); break;
+                case 7: Console.WriteLine("Saindo ..."); Thread.Sleep(2500); System.Environment.Exit(0); break;
+                default: Menu(); break;
+            }
+        }
+        public static void CarregarVetor()
+        {
+            Console.WriteLine("Digite o tamanho do vetor que quer exibir:");
+            int tamanho = int.Parse(Console.ReadLine());
+            int[] n = new int[tamanho];
+            for (int i = 0; i < tamanho; i++)
+            {
+                Console.WriteLine($"Digite o valor para a posição {i}: ");
+                n[i] = int.Parse(Console.ReadLine());
+            }
+
+        }
+        public static void ListarVetor()
+        {
+            foreach (int item in n)
+            {
+
+            }
+        }
+        public static void ExibirPares() { }
+        public static void ExibirImpares() { }
+        public static void ExibirParesQuantidade() { }
+        public static void ExibirImparesQuantidade() { }
+
+    }
+}
+ 
+

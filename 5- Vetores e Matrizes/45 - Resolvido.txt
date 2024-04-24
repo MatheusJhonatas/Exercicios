@@ -1,0 +1,54 @@
+45) Dada uma seqüência de n números (vetor de inteiros), imprimi-la na ordem inversa que foi realizada a leitura:
+
+Meu código:
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int[] a = new int[5];
+        Console.WriteLine("Digite um numero:");
+        a[0] = int.Parse(Console.ReadLine());
+        Console.WriteLine("Digite um numero:");
+        a[1] = int.Parse(Console.ReadLine());
+        Console.WriteLine("Digite um numero:");
+        a[2] = int.Parse(Console.ReadLine());
+        Console.WriteLine("Digite um numero:");
+        a[3] = int.Parse(Console.ReadLine());
+        Console.WriteLine("Digite um numero:");
+        a[4] = int.Parse(Console.ReadLine());
+
+        Console.WriteLine($"Você digitou: {a[4]},{a[3]},{a[2]},{a[1]} e {a[0]}.");
+
+    }
+}
+
+
+Código do chat gpt:
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.Write("Digite o número de elementos da sequência: ");
+        int n = int.Parse(Console.ReadLine());
+
+        int[] numeros = new int[n];
+
+        // Solicitando e armazenando os números na sequência
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write($"Digite o {i + 1}º número: ");
+            numeros[i] = int.Parse(Console.ReadLine());
+        }
+
+        // Imprimindo a sequência na ordem inversa
+        Console.WriteLine("Sequência na ordem inversa:");
+        for (int i = n - 1; i >= 0; i--)
+        {
+            Console.WriteLine(numeros[i]);
+        }
+    }
+}

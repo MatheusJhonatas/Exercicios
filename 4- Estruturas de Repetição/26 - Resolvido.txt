@@ -1,0 +1,38 @@
+26) Escreva um programa que exiba os números de 1 a 100 na tela em ordem decrescente.
+
+
+Meu código:
+
+using System;
+
+namespace Program
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            for (var i = 100; i >= 1; i--)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+}
+
+Código do chat gpt:
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Exibir números de 100 a 1 em ordem decrescente
+        for (int i = 100; i >= 1; i--)
+        {
+            Console.WriteLine(i);
+        }
+
+        Console.ReadLine(); // Aguardar a entrada do usuário antes de fechar a janela
+    }
+}
+

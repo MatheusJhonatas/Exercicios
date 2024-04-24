@@ -1,0 +1,84 @@
+34) Escreva um programa que leia um conjunto de números positivos e exiba o menor e o maior. Suporemos que o número de elementos deste conjunto não é conhecido, e que um número negativo será utilizado para sinalizar o
+fim dos dados.
+Meu código:
+using System;
+using System.Linq.Expressions;
+namespace Exercicio34
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            
+            int numMaior = 0;
+            int numMeno = 0;
+            int contadorNumeros = 0;
+
+            while (true)
+            {
+                Console.WriteLine("Digite o primeiro número");
+                int numero1 = int.Parse(Console.ReadLine());
+                Console.WriteLine("Digite o segundo número");
+                int numero2 = int.Parse(Console.ReadLine());
+                if (numero1 < 0 || numero2 < 0)
+                {
+                    Console.WriteLine("O valor digitado não pode ser negativo");
+                    Console.WriteLine("Saindo ....");
+                    Thread.Sleep(3000);
+                    break;
+                }
+                else if (numero1 > numero2)
+                {
+                    Console.WriteLine($"{numero1} é maior que o {numero2}");
+                }
+                else if (numero2 > numero1)
+                {
+                    Console.WriteLine($"{numero2} é maior que o {numero1}");
+                }
+                else { Console.WriteLine("Os números são iguais"); }
+
+            }
+        }
+    }
+}
+
+Código do chat gpt: 
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int numero;
+        int menor = int.MaxValue; // Inicializa com o maior valor possível
+        int maior = int.MinValue; // Inicializa com o menor valor possível
+
+        // Loop para ler os números até que um número negativo seja inserido
+        do
+        {
+            Console.Write("Insira um número positivo (ou negativo para terminar): ");
+            numero = Convert.ToInt32(Console.ReadLine());
+
+            // Verifica se o número inserido é positivo
+            if (numero >= 0)
+            {
+                // Atualiza o menor e o maior número, se necessário
+                menor = Math.Min(menor, numero);
+                maior = Math.Max(maior, numero);
+            }
+
+        } while (numero >= 0); // Loop continua enquanto o número inserido for positivo
+
+        // Verifica se algum número positivo foi inserido antes de exibir o resultado
+        if (menor != int.MaxValue)
+        {
+            Console.WriteLine($"O menor número inserido é: {menor}");
+            Console.WriteLine($"O maior número inserido é: {maior}");
+        }
+        else
+        {
+            Console.WriteLine("Nenhum número positivo foi inserido.");
+        }
+    }
+}
+

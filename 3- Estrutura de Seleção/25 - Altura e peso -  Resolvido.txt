@@ -1,0 +1,92 @@
+25) Tendo como dados de entrada a altura e o sexo de uma pessoa, faça um programa que calcule seu peso ideal,
+utilizando as seguintes fórmulas: (h = altura)
+- Para homens: (72.7*h) - 58
+- Para mulheres: (62.1 *h) - 44.7
+
+Meu código:
+
+using System;
+using System.Diagnostics;
+
+namespace Exemplo
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("Você é homem, ou mulher?");
+            Console.WriteLine("Digite abaixo a opção correta");
+            Console.WriteLine("1 - PARA MULHER");
+            Console.WriteLine("2 - PARA HOMEM");
+            Console.WriteLine("3 - PARA SAIR");
+            Console.WriteLine("-----------------------------");
+            int option = int.Parse(Console.ReadLine());
+            switch (option)
+            {
+                case 1: woman(); break;
+                case 2: man(); break;
+                case 3: Console.WriteLine("Programa Encerrado...."); System.Environment.Exit(3); break;
+                default: Console.WriteLine("Algo saiu do controle, tente novamente..."); break;
+            }
+
+        }
+        public static void woman()
+        {
+            Console.WriteLine("Digite sua altura: ");
+            float h = float.Parse(Console.ReadLine());
+            double pesoIdeal = (62.1 * h) - 44.7;
+            Console.WriteLine($"Seu peso ideal é: {pesoIdeal}");
+        }
+        public static void man()
+        {
+
+            Console.WriteLine("Digite sua altura: ");
+            float h = float.Parse(Console.ReadLine());
+
+            double pesoIdeal = (72.7 * h) - 58;
+            Console.WriteLine("Seu peso ideal é: " + pesoIdeal);
+
+        }
+
+    }
+}
+
+
+código do chat gpt:
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Solicitar a entrada do usuário para altura
+        Console.Write("Digite a altura em metros: ");
+        double altura = Convert.ToDouble(Console.ReadLine());
+
+        // Solicitar a entrada do usuário para sexo
+        Console.Write("Digite o sexo (M para masculino, F para feminino): ");
+        char sexo = Console.ReadLine().ToUpper()[0]; // Converte para maiúsculo e pega o primeiro caractere
+
+        // Calcular o peso ideal de acordo com o sexo
+        double pesoIdeal = 0;
+
+        if (sexo == 'M')
+        {
+            pesoIdeal = (72.7 * altura) - 58;
+        }
+        else if (sexo == 'F')
+        {
+            pesoIdeal = (62.1 * altura) - 44.7;
+        }
+        else
+        {
+            Console.WriteLine("Sexo inválido. Por favor, insira M para masculino ou F para feminino.");
+            return;
+        }
+
+        // Exibir o peso ideal calculado
+        Console.WriteLine($"O peso ideal para uma pessoa de {altura} metros de altura e sexo {sexo} é: {pesoIdeal} kg");
+    }
+}
+

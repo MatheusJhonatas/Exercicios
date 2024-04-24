@@ -1,0 +1,44 @@
+30) Faça um programa para imprimir uma tabuada.
+
+using System;
+using System.Runtime.InteropServices;
+namespace Exercicios
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            //30) Faça um programa para imprimir uma tabuada.
+            Console.WriteLine("Qual tabuada você quer?");
+            int tabu = int.Parse(Console.ReadLine());
+            
+            for (var i = 0; i <= 10; i++)
+            {
+                int resultado = i * tabu;
+                Console.WriteLine($"{i} x {tabu} = {resultado}");
+            }
+
+        }
+    }
+}
+
+
+Código do chat gpt: 
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Número para o qual queremos imprimir a tabuada
+        int numero = 5;
+
+        Console.WriteLine($"Tabuada do {numero}:");
+
+        for (int i = 1; i <= 10; i++)
+        {
+            int resultado = numero * i;
+            Console.WriteLine($"{numero} x {i} = {resultado}");
+        }
+    }
+}

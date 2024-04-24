@@ -1,0 +1,186 @@
+23) Escreva um programa que exiba as seguintes opções e realize os que se pede em cada uma delas:
+1 – Adição
+2 – Subtração
+3 – Multiplicação
+4 – Divisão
+
+Meu código:
+using System;
+using System.Runtime.InteropServices;
+using System.Security.AccessControl;
+namespace Exercicio23
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            Console.WriteLine("------------------------------");
+            Console.WriteLine("Digite uma das opções abaixo: ");
+            Console.WriteLine("1 PARA Adição");
+            Console.WriteLine("2 PARA Subtração");
+            Console.WriteLine("3 PARA Multiplicação");
+            Console.WriteLine("4 PARA Divisão");
+            Console.WriteLine("0 PARA SAIR");
+            int option = int.Parse(Console.ReadLine());
+
+            switch (option)
+            {
+                case 0: System.Environment.Exit(0); break;
+                case 1: adicao(); break;
+                case 2: subtracao(); break;
+                case 3: multiplicacao(); break;
+                case 4: divisao(); break;
+
+            }
+            static void adicao()
+            {
+                Console.WriteLine("Digite um numero: ");
+                int v1 = int.Parse(Console.ReadLine());
+                Console.WriteLine("Digite o segundo número");
+                int v2 = int.Parse(Console.ReadLine());
+                int soma = v1 + v2;
+                Console.WriteLine($"A soma dos números é: {soma}");
+                Main();
+            }
+            static void subtracao()
+            {
+                Console.WriteLine("Digite um numero: ");
+                int v1 = int.Parse(Console.ReadLine());
+                Console.WriteLine("Digite o segundo número");
+                int v2 = int.Parse(Console.ReadLine());
+                int subtracao1 = v1 - v2;
+                Console.WriteLine($"A subtração dos números é: {subtracao1}");
+                Main();
+            }
+            static void multiplicacao()
+            {
+                Console.WriteLine("Digite um numero: ");
+                int v1 = int.Parse(Console.ReadLine());
+                Console.WriteLine("Digite o segundo número");
+                int v2 = int.Parse(Console.ReadLine());
+                int multiplic1 = v1 * v2;
+                Console.WriteLine($"A soma dos números é: {multiplic1}");
+                Main();
+            }
+            static void divisao()
+            {
+                Console.WriteLine("Digite um numero: ");
+                int v1 = int.Parse(Console.ReadLine());
+                Console.WriteLine("Digite o segundo número");
+                int v2 = int.Parse(Console.ReadLine());
+                int div = v1 / v2;
+                Console.WriteLine($"A soma dos números é: {div}");
+                Main();
+            }
+        }
+    }
+}
+
+
+Código do chat gpt:
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        while (true)
+        {
+            Console.WriteLine("Escolha uma operação:");
+            Console.WriteLine("1 - Adição");
+            Console.WriteLine("2 - Subtração");
+            Console.WriteLine("3 - Multiplicação");
+            Console.WriteLine("4 - Divisão");
+            Console.WriteLine("0 - Sair");
+
+            // Obter a escolha do usuário
+            Console.Write("Digite o número da operação desejada: ");
+            int escolha = int.Parse(Console.ReadLine());
+
+            // Verificar a escolha do usuário
+            switch (escolha)
+            {
+                case 1:
+                    RealizarAdicao();
+                    break;
+                case 2:
+                    RealizarSubtracao();
+                    break;
+                case 3:
+                    RealizarMultiplicacao();
+                    break;
+                case 4:
+                    RealizarDivisao();
+                    break;
+                case 0:
+                    // Sair do programa
+                    Environment.Exit(0);
+                    break;
+                default:
+                    Console.WriteLine("Opção inválida. Tente novamente.");
+                    break;
+            }
+
+            Console.WriteLine(); // Adicionar uma linha em branco para melhor legibilidade
+        }
+    }
+
+    static void RealizarAdicao()
+    {
+        Console.Write("Digite o primeiro número: ");
+        double numero1 = double.Parse(Console.ReadLine());
+
+        Console.Write("Digite o segundo número: ");
+        double numero2 = double.Parse(Console.ReadLine());
+
+        double resultado = numero1 + numero2;
+
+        Console.WriteLine($"Resultado da adição: {resultado}");
+    }
+
+    static void RealizarSubtracao()
+    {
+        Console.Write("Digite o primeiro número: ");
+        double numero1 = double.Parse(Console.ReadLine());
+
+        Console.Write("Digite o segundo número: ");
+        double numero2 = double.Parse(Console.ReadLine());
+
+        double resultado = numero1 - numero2;
+
+        Console.WriteLine($"Resultado da subtração: {resultado}");
+    }
+
+    static void RealizarMultiplicacao()
+    {
+        Console.Write("Digite o primeiro número: ");
+        double numero1 = double.Parse(Console.ReadLine());
+
+        Console.Write("Digite o segundo número: ");
+        double numero2 = double.Parse(Console.ReadLine());
+
+        double resultado = numero1 * numero2;
+
+        Console.WriteLine($"Resultado da multiplicação: {resultado}");
+    }
+
+    static void RealizarDivisao()
+    {
+        Console.Write("Digite o numerador: ");
+        double numerador = double.Parse(Console.ReadLine());
+
+        Console.Write("Digite o denominador: ");
+        double denominador = double.Parse(Console.ReadLine());
+
+        if (denominador != 0)
+        {
+            double resultado = numerador / denominador;
+            Console.WriteLine($"Resultado da divisão: {resultado}");
+        }
+        else
+        {
+            Console.WriteLine("Erro: Divisão por zero.");
+        }
+    }
+}
+

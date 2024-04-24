@@ -1,0 +1,125 @@
+37) Faça um programa de conversão de base numérica. O programa deverá apresentar uma tela de entrada com as
+seguintes opções:
+1 – Adição
+2 – Subtração
+3 – Multiplicação
+4 – Divisão
+Informe a opção:
+A partir da opção escolhida, o programa deverá solicitar para que o usuário digite dois números. Em seguida, o
+programa deve exibir o resultado da opção indicada pelo usuário e perguntar ao usuário se ele deseja voltar ao
+menu principal. Caso a resposta seja ´S´ ou ´s´, deverá voltar ao menu, caso contrário deverá encerrar o
+programa.
+Meu código:
+using System;
+using System.Security.AccessControl;
+
+namespace Exercicio37
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("       CALCULADORA     ");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("Digite a opção desejada");
+            Console.WriteLine("1 - Adição");
+            Console.WriteLine("2 - Subtração");
+            Console.WriteLine("3 - Divisão");
+            Console.WriteLine("4 - Multiplicação");
+            Console.WriteLine("0 - Para SAIR");
+            int option = int.Parse(Console.ReadLine());
+
+            switch (option)
+            {
+                case 0: Console.WriteLine("SAINDO..."); Thread.Sleep(4000); System.Environment.Exit(0); break;
+                case 1: adicao(); break;
+                case 2: subtracao(); break;
+                case 3: divisao(); break;
+                case 4: multiplicacao(); break;
+                default: Main(); break;
+            }
+        }
+        public static void adicao()
+        {
+            Console.Clear();
+            Console.WriteLine("Digite o primeiro numero para adição: ");
+            double v1 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Digite o segundo numero para adição: ");
+            double v2 = double.Parse(Console.ReadLine());
+
+            Console.WriteLine($"A soma de {v1} + {v2} = {v1 + v2}");
+            Console.WriteLine("-------------------------------------");
+            Console.WriteLine("Deseja voltar ao menu principal? (S/N)");
+            char resposta = char.ToUpper(Console.ReadKey().KeyChar);
+            Console.WriteLine();
+            while (resposta == 'S')
+            {
+                Main();
+            }
+
+
+        }
+
+código chat gpt:
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        char resposta;
+
+        do
+        {
+            MostrarMenu();
+            int opcao = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o primeiro número:");
+            double num1 = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o segundo número:");
+            double num2 = double.Parse(Console.ReadLine());
+
+            switch (opcao)
+            {
+                case 1:
+                    Console.WriteLine($"Resultado da adição: {num1 + num2}");
+                    break;
+                case 2:
+                    Console.WriteLine($"Resultado da subtração: {num1 - num2}");
+                    break;
+                case 3:
+                    Console.WriteLine($"Resultado da multiplicação: {num1 * num2}");
+                    break;
+                case 4:
+                    if (num2 != 0)
+                        Console.WriteLine($"Resultado da divisão: {num1 / num2}");
+                    else
+                        Console.WriteLine("Não é possível dividir por zero.");
+                    break;
+                default:
+                    Console.WriteLine("Opção inválida.");
+                    break;
+            }
+
+            Console.WriteLine("Deseja voltar ao menu principal? (S/N)");
+            resposta = char.ToUpper(Console.ReadKey().KeyChar);
+            Console.WriteLine();
+
+        } while (resposta == 'S');
+
+        Console.WriteLine("Programa encerrado.");
+    }
+
+    static void MostrarMenu()
+    {
+        Console.WriteLine("=== Menu ===");
+        Console.WriteLine("1 - Adição");
+        Console.WriteLine("2 - Subtração");
+        Console.WriteLine("3 - Multiplicação");
+        Console.WriteLine("4 - Divisão");
+        Console.WriteLine("Informe a opção:");
+    }
+}

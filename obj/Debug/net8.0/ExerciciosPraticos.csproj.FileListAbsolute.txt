@@ -1,0 +1,15 @@
+C:\Dev\ExerciciosPraticos\obj\Debug\net8.0\ExerciciosPraticos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\ExerciciosPraticos\obj\Debug\net8.0\ExerciciosPraticos.AssemblyInfoInputs.cache
+C:\Dev\ExerciciosPraticos\obj\Debug\net8.0\ExerciciosPraticos.AssemblyInfo.cs
+C:\Dev\ExerciciosPraticos\obj\Debug\net8.0\ExerciciosPraticos.csproj.CoreCompileInputs.cache
+C:\Dev\ExerciciosPraticos\obj\Debug\net8.0\ExerciciosPraticos.sourcelink.json
+C:\Dev\ExerciciosPraticos\bin\Debug\net8.0\ExerciciosPraticos.exe
+C:\Dev\ExerciciosPraticos\bin\Debug\net8.0\ExerciciosPraticos.deps.json
+C:\Dev\ExerciciosPraticos\bin\Debug\net8.0\ExerciciosPraticos.runtimeconfig.json
+C:\Dev\ExerciciosPraticos\bin\Debug\net8.0\ExerciciosPraticos.dll
+C:\Dev\ExerciciosPraticos\bin\Debug\net8.0\ExerciciosPraticos.pdb
+C:\Dev\ExerciciosPraticos\obj\Debug\net8.0\ExerciciosPraticos.dll
+C:\Dev\ExerciciosPraticos\obj\Debug\net8.0\refint\ExerciciosPraticos.dll
+C:\Dev\ExerciciosPraticos\obj\Debug\net8.0\ExerciciosPraticos.pdb
+C:\Dev\ExerciciosPraticos\obj\Debug\net8.0\ExerciciosPraticos.genruntimeconfig.cache
+C:\Dev\ExerciciosPraticos\obj\Debug\net8.0\ref\ExerciciosPraticos.dll

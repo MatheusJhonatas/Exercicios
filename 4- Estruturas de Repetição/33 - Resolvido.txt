@@ -1,0 +1,80 @@
+33) Escreva um programa que calcule e exiba a média da nota dos alunos de uma turma em uma prova. O número de
+alunos é desconhecido. Os dados de um aluno são: número de matrícula e a sua nota na prova em questão.
+
+Meu código:
+
+using System;
+namespace Exercicio32
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            double somaNotas = 0;
+            int contadorAlunos = 0;
+
+            Console.WriteLine("Digite a notas dos alunos ou -1 para encerrar");
+            while (true)
+            {
+                Console.WriteLine("Digite a nota do {0} aluno", contadorAlunos + 1);
+                double nota = double.Parse(Console.ReadLine());
+                if (nota == -1)
+                {
+                    break;
+                }
+                somaNotas += nota;
+                contadorAlunos++;
+            }
+            if (contadorAlunos > 0)
+            {
+                double media = somaNotas / contadorAlunos;
+                Console.WriteLine("A soma dos alunos são{0}", media);
+            }
+            else
+            {
+                Console.WriteLine("Nenhuma nota foi inserida.");
+            }
+        }
+
+    }
+}
+
+Código chat gpt: 
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        double somaNotas = 0;
+        int contadorAlunos = 0;
+
+        Console.WriteLine("Digite as notas dos alunos (digite -1 para encerrar):");
+
+        while (true)
+        {
+            Console.Write("Nota do aluno {0}: ", contadorAlunos + 1);
+            double nota = Convert.ToDouble(Console.ReadLine());
+
+            // Verifica se o usuário deseja encerrar a entrada de notas
+            if (nota == -1)
+            {
+                break;
+            }
+
+            somaNotas += nota;
+            contadorAlunos++;
+        }
+
+        if (contadorAlunos > 0)
+        {
+            double media = somaNotas / contadorAlunos;
+            Console.WriteLine("A média das notas dos alunos é: {0}", media);
+        }
+        else
+        {
+            Console.WriteLine("Nenhuma nota foi inserida.");
+        }
+    }
+}
