@@ -1,5 +1,0 @@
-58) Fazer um programa para armazenar em um vetor, vários números inteiros e positivos e calcular a média. 
-
-Imprimir também o maior. 
-
-A quantidade de números lidos será definida pelo usuário.

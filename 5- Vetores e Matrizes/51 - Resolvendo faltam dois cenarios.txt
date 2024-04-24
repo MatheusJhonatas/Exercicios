@@ -1,3 +1,0 @@
-51) Fazer um programa para ler uma quantidade N de alunos. Ler a nota de cada um dos N alunos e calcular a média
-aritmética das notas. Contar quantos alunos estão com a nota acima de 7.0. Obs.: Se nenhum aluno tirou nota
-acima de 5.0, imprimir mensagem: Não há nenhum aluno com nota acima de 5.

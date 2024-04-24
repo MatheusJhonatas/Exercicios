@@ -64,4 +64,4 @@ class Program
         Console.WriteLine($"Distância percorrida: {distancia} km");
         Console.WriteLine($"Quantidade de litros utilizada: {litrosUsados} litros");
     }
-}*/
+}
