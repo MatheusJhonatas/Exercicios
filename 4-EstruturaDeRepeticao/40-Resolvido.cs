@@ -51,7 +51,6 @@ namespace Exercicio40
                 {
                     Console.WriteLine("Índice de poluição abaixo do aceitável.");
                 }
-
                 Console.WriteLine("Deseja encerrar o programa? (S/N)");
                 encerrar = char.ToUpper(Console.ReadKey().KeyChar);
                 Console.WriteLine();
