@@ -24,12 +24,12 @@ namespace Exercicio39
                     Console.WriteLine($"{num} é um número par.");
                     if (num > 0)
                     {
-                        Console.WriteLine($" {num} número positivo");
+                        Console.WriteLine($" {num} é um número positivo");
                     }
 
                     else
                     {
-                        Console.WriteLine($"{num} número negativo");
+                        Console.WriteLine($"{num} é um número negativo");
                     }
 
                 }
