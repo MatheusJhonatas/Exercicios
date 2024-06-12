@@ -28,6 +28,28 @@ namespace Exercicio
             Console.WriteLine("Digite o número X: ");
             x = int.Parse(Console.ReadLine());
 
+            int maiorQueX = 0;
+            int menorQueX = 0;
+            int iguaisAX = 0;
+
+            foreach (int num in vetor)
+            {
+                if (num > x)
+                {
+                    maiorQueX++;
+                }
+                else if (num < x)
+                {
+                    menorQueX++;
+                }
+                else
+                {
+                    iguaisAX++;
+                }
+            }
+            Console.WriteLine($"Números no vetor são maiores que X: {maiorQueX}");
+            Console.WriteLine($"Números menores que X: {menorQueX}");
+            Console.WriteLine($"Números iguais a X: {iguaisAX}");
         }
 
     }
