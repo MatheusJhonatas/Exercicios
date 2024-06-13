@@ -20,13 +20,13 @@ namespace ExerciciosOOP
             Console.WriteLine("Digite os números do primeiro vetor: ");
             for (int i = 0; i < n; i++)
             {
-                Console.WriteLine($"Elemento {i + 1}: ");
+                Console.WriteLine($"Número {i + 1}: ");
                 v1[i] = int.Parse(Console.ReadLine());
             }
             Console.WriteLine("Digite os números do segundo vetor: ");
             for (int i = 0; i < n; i++)
             {
-                Console.WriteLine($"Elemento {i + 1}: ");
+                Console.WriteLine($"Número {i + 1}: ");
                 v2[i] = int.Parse(Console.ReadLine());
             }
             int cont = 0;
