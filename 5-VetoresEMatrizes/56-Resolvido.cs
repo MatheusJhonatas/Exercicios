@@ -4,7 +4,7 @@ using System;
 
 namespace Exercicio
 {
-    public class Exercicio51
+    public class Exercicio56
     {
         public static void Main()
         {
