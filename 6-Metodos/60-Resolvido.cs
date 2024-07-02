@@ -1,6 +1,17 @@
 using System;
 namespace Exercicio60
 {
+    /* Escreva um programa que retorne o número do quadrante (1,2,3 ou 4) através de um método chamado
+    VERIFICA_QUADRANTE, que deve receber um valor para x e um valor para y.
+    Quadrantes
+    x |
+    |
+    2º | 1º
+    |
+    y ------------------------------
+    |
+    |
+    3º | 4º*/
     class Program
     {
         static void Main(string[] args)
